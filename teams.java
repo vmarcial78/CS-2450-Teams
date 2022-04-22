@@ -43,7 +43,7 @@ public class teams extends Application
       VBox groupchat = new VBox(members);
       
       // Create a Scene with the HBox as its root node.
-      HBox hbox = new HBox(left, channels, bulletin, groupchat);
+      HBox hbox = new HBox(10, left, channels, bulletin, groupchat);
       Scene scene = new Scene(hbox);
 
       // Set stylesheet
