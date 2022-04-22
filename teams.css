@@ -10,7 +10,25 @@
     -fx-width: 50px;
     -fx-border-width: 10px;
  }
- .label{
+.label{
     -fx-font-family: Arial;
-    -fx-font-size: 12pt;
+    -fx-font-size: 24pt;
  }
+VBox {
+    -fx-background-color: red;
+}
+.left-side{
+    -fx-background-color: #EBEBEB;
+}
+.channels{
+    -fx-background-color: #F0F0F0;
+}
+.bulletin{
+    -fx-background-color: #F5F5F5;
+}
+.members-list{
+    -fx-background-color: #F0F0F0;
+}
+.search-bar{
+    -fx-background-color: #444791;
+}
