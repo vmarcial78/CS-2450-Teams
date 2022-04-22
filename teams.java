@@ -21,7 +21,7 @@ public class teams extends Application
    public void start(Stage primaryStage)
    {
       // Create a Label component.
-      Label messageLabel = new Label("Hello World");
+      Label searchLabel = new Label("search");
       Label activity = new Label("Activity");
       Label chat = new Label("Chat");
       Label teams = new Label("Teams");
@@ -31,20 +31,26 @@ public class teams extends Application
       Label post1 = new Label("Post 1");
       Label post2 = new Label("Post 2");
       Label members = new Label("members");
+      Label rachel = new Label("members");
       
-      // Put the Label in an HBox.
-
-      // Put the promptLabel and the costTextField in HBox
-      
-      // Put the HBox, calcButton, and resultLabel in VBox
+      // Create other boxes
+      HBox searchBar = new HBox(searchLabel);
       VBox left = new VBox(activity, chat, teams);
       VBox channels = new VBox(sheCodes, groupChat, voiceChannel);
       VBox bulletin = new VBox(post1, post2);
       VBox groupchat = new VBox(members);
+      VBox membersList = new VBox(members, rachel);
+      left.getStyleClass().add("left-side");
+      channels.getStyleClass().add("channels");
+      bulletin.getStyleClass().add("bulletin");
+      membersList.getStyleClass().add("members-list");
+      searchBar.getStyleClass().add("search-bar");
       
-      // Create a Scene with the HBox as its root node.
-      HBox hbox = new HBox(10, left, channels, bulletin, groupchat);
-      Scene scene = new Scene(hbox);
+      // Create a Scene with the VBox as its root node.
+      HBox hbox = new HBox(10, left, channels, bulletin, membersList);
+      VBox vbox = new VBox(searchBar, hbox);
+
+      Scene scene = new Scene(vbox);
 
       // Set stylesheet
       scene.getStylesheets().add("teams.css");
